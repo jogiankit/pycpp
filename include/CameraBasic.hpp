@@ -22,6 +22,8 @@ public:
 	CameraExposureInfo& camera_api_get_exposure(void);
 	CameraResultCode camera_api_set_exposure(CameraExposureInfo& exp_info);
 	CameraImageInfo& camera_api_get_image(void);
+	CameraResultCode camera_api_common_api(int data);
+	CameraResultCode camera_api_other_common_api();
 };
 
 #endif	/* __CAMERA_BASIC_H__ */

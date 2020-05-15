@@ -16,15 +16,15 @@ SET(SRCS
 	src/CameraMain.cpp
 	src/CameraBasic.cpp
 	src/CameraAdvanced.cpp
-	#src/main.cpp
-	src/PyCppCamera.cpp
+	src/main.cpp
+	#src/PyCppCamera.cpp
 )
 
-add_subdirectory(pybind11)
+#add_subdirectory(pybind11)
 
 # binary build
-#ADD_EXECUTABLE(camera_interface ${SRCS})
-#TARGET_LINK_LIBRARIES(camera_interface ${pkgs_LDFLAGS} "-ldl")
+ADD_EXECUTABLE(camera_interface ${SRCS})
+TARGET_LINK_LIBRARIES(camera_interface ${pkgs_LDFLAGS} "-ldl")
 #TARGET_LINK_LIBRARIES(camera_interface pybind11)
 
-pybind11_add_module(camera_interface ${SRCS})
+#pybind11_add_module(camera_interface ${SRCS})

@@ -16,8 +16,8 @@ public:
 	virtual ~CameraMain(void);
 
 	/* Virtual methods for Camera Interface */
-	virtual CameraResultCode camera_api_common_api(int data);
-	virtual CameraResultCode camera_api_other_common_api(void);
+	CameraResultCode camera_api_common_api(int data);
+	CameraResultCode camera_api_other_common_api(void);
 };
 
 #endif	/* __CAMERA_MAIN_H__ */

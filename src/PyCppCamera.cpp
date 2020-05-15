@@ -16,7 +16,7 @@ PYBIND11_MODULE(CameraInterface, m)
 	    .def(py::init<>())
 	    .def("camera_api_set_exposure", &CameraInterface::camera_api_set_exposure);
 
-	py::class_<CameraInterface, PyCamera>(m, "PyCamera")
+	py::class_<CameraInterface, PyCamera>(m, "PyCamera")	/* This needs a wrapper function to return image data as NumPy array */
 	    .def(py::init<>())
 	    .def("camera_api_get_image", &CameraInterface::camera_api_get_image(void));
 

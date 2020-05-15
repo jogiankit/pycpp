@@ -8,10 +8,10 @@
 
 static void _test_basic_camera()
 {
+	CameraInterface *basic_camera = NULL;
 	CameraExposureInfo exp_info;
 	CameraImageInfo img_info;
 	unsigned char img1[3][3] = {{'0','0','1'}, {'1','0','1'}, {'1','1','0'}};
-	CameraInterface *basic_camera = NULL;
 
 	exp_info.exposure_time = 5;
 	img_info.raw_max = 3;
@@ -57,6 +57,12 @@ static void _test_basic_camera()
 		exp_info_get = basic_camera->camera_api_get_exposure();
 
 		cout << "set exposure_time: " << exp_info_get.exposure_time << endl;
+	}
+
+	/* Verify common methods */
+	{
+		CameraResultCode res1 = basic_camera->camera_api_common_api(5);
+		CameraResultCode res2 = basic_camera->camera_api_other_common_api();
 	}
 }
 
@@ -111,6 +117,12 @@ static void _test_adv_camera()
 		exp_info_get = adv_camera->camera_api_get_exposure();
 
 		cout << "exposure_time: " << exp_info_get.exposure_time << endl;
+	}
+
+	/* Verify common methods */
+	{
+		CameraResultCode res1 = adv_camera->camera_api_common_api(5);
+		CameraResultCode res2 = adv_camera->camera_api_other_common_api();
 	}
 }
 

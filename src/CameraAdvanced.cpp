@@ -25,3 +25,17 @@ CameraImageInfo& CameraAdvanced::camera_api_get_image(void)
 
 	return _image_info_adv;
 }
+
+CameraResultCode CameraAdvanced::camera_api_common_api(int data)
+{
+	cout << "CameraAdvanced::camera_api_common_api()" << endl;
+
+	return CameraMain::camera_api_common_api(data);
+}
+
+CameraResultCode CameraAdvanced::camera_api_other_common_api(void)
+{
+	cout << "CameraAdvanced::camera_api_other_common_api()" << endl;
+
+	return CameraMain::camera_api_other_common_api();
+}
