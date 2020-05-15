@@ -5,9 +5,11 @@
 	
 	> Comment PyCppCamera.cpp in CMakelist.txt
 	
-	> Run command : cmake -H. -Bbuild
+	> Run command : 
+		"cmake -H. -Bbuild"
 	
-	> Go to build folder and run : make
+	> Go to build folder and run : 
+		"make"
 	
 	> Run camera_interface executable to see the output
 	
@@ -17,5 +19,6 @@
 	
 	> Uncomment PyCappCamera.cpp in CMakelist.txt
 	
-	> Run command : cmake -H. -Bbuild
+	> Run command :
+		"cmake -H. -Bbuild"
 	
